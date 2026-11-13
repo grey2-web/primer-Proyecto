@@ -43,6 +43,22 @@
             </div>
         </div>
     </main>
-    
+    <script>
+        document.getElementById('formularioCalculadora').addEventListener('submit', e => {
+            e.preventDefault();
+            let peso = parseFloat(document.getElementById('numero1').value);
+            let altura = parseFloat(document.getElementById('numero2').value);
+            let imc = peso / (altura * altura);
+            let estado = imc < 18.5 ? "Bajo peso" : imc < 25 ? "Peso normal" : imc < 30 ? "Sobrepeso" : "Obesidad";
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+            document.getElementById('mensaje').textContent = estado;
+        });
+        document.getElementById('btnLimpiar').addEventListener('click', () => {
+            document.getElementById('formularioCalculadora').reset();
+            document.getElementById('resultado').textContent = "-";
+            document.getElementById('mensaje').textContent = "El resultado aparecerá aquí";
+        });
+    </script>
+
 </body>
 </html>
