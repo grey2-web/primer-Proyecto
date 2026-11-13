@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="card calculator-card">
+        <div class="card-header">
+            <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
+            <h3 class="h3 fw-bold mb-1">Calculadora IMC</h3>
+            <p class="mb-0 opacity-75 small">JavaScript - CSS - Bootstrap</p>
+        </div>
+        <div class="card-body p-4">
+            <p class="text-secondary small mb-3">Ingresa tu peso y altura para calcular tu IMC</p>
+            <form id="formularioCalculadora">
+                <div class="mb-3">
+                    <label for="numero1" class="form-label fw-semibold small"><i class="bi bi-person me-1"></i>Peso (kg)</label>
+                    <input type="number" id="numero1" class="form-control" placeholder="ejemplo: 70" step="any" required>
+                </div>
+                <div class="mb-3">
+                    <label for="numero2" class="form-label fw-semibold small"><i class="bi bi-rulers me-1"></i>Altura (m)</label>
+                    <input type="number" id="numero2" class="form-control" placeholder="ejemplo: 1.75" step="any" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold small"><i class="bi bi-list-task me-1"></i>Categoría</label>
+                    <select id="operacion" class="form-select">
+                        <option value="imc">Calcular IMC</option>
+                    </select>
+                    <div id="ayudaOperacion" class="small text-muted mt-2">Calcula tu Índice de Masa Corporal</div>
+                </div>
+                <button type="submit" class="btn btn-calcular w-100 mb-2"><i class="bi bi-calculator me-1"></i>Calcular IMC</button>
+                <button type="button" id="btnLimpiar" class="btn btn-outline-secondary w-100">Limpiar campos</button>
+            </form>
+            <div class="resultado mt-4">
+                <div class="small text-uppercase fw-bold text-muted" style="font-size: 0.7rem;">RESULTADO</div>
+                <div id="resultado" style="font-size: 1.8rem; font-weight: 700;">-</div>
+                <div id="mensaje" class="small text-muted">El resultado aparecerá aquí</div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
